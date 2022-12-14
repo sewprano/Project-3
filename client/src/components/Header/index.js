@@ -9,7 +9,7 @@ function Header() {
     return (
         <header className={styles.header}>
             {/* add logo here */}
-            <h1>Couch Tuber</h1>
+            <h3>Couch Tuber</h3>
             <nav>
                 <Link className='link' to='/'>Home</Link>
                 {/* <Link className='link' to='/genres'>Genre Search</Link> */}

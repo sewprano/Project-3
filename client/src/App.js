@@ -6,7 +6,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // import pages & components
 import Home from './pages/Home';
+import Account from './pages/Account';
+import About from './pages/About';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 const client = new ApolloClient({
   uri: '/graphql',
@@ -25,8 +28,17 @@ function App() {
               path="/"
               element={<Home />}
               />
+              {/* <Route
+              path="/account"
+              element={<Account />}
+              />
+              <Route
+              path="/About"
+              element={<About />}
+              /> */}
             </Routes>
           </div>
+          {/* <Footer /> */}
         </div>
       </Router>
     </ApolloProvider>
