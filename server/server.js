@@ -1,5 +1,7 @@
 const express = require('express');
 const db = require('./config/connection');
+// import apollo
+// typedefs & resolvers (schemas folder)
 
 const app = express();
 const PORT = process.env.PORT || 3001;
