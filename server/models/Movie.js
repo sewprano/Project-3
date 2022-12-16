@@ -1,21 +1,18 @@
 const { Schema, model } = require('mongoose');
 
+//change structure for user fav movies
+
 const movieSchema = new Schema({
     title: {
         type: String,
         required: true,
     },
+    director: {
+        type: String,
+    },
     year: {
         type: Integer,
         requried: true,
-    },
-    runtime: {
-        type: Integer,
-        required: true,
-    },
-    streamService: {
-        type: String,
-        required: true,
     },
 });
 
