@@ -10,7 +10,8 @@ const Home = () => {
                 across multiple streaming services</p>
             <form>
                 <label for='Home' ></label>
-                <input type='text' id='titleSearchName' name='Title Name'></input>
+                <input type='text' id='titleSearchName' name='Title Name' placeholder='Title Name'></input>
+                <input type='submit' value='submit'></input>
             </form>
         </div>
     )
