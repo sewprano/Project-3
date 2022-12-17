@@ -6,7 +6,7 @@ import Auth from '../utils/auth';
 // import styles
 
 import Form from 'react-bootstrap/Form';
-import Button from 'react-bootatrap/Button';
+import Button from 'react-bootstrap/Button';
 
 const Login = () => {
     return (
