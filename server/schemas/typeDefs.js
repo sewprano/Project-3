@@ -8,12 +8,13 @@ const typeDefs = gql`
         username: String!
         email: String!
         password: String!
+        profile: Profile!
     }
 
     type Profile {
         _id: ID!
-        user: *REFERENCE MODEL SOMEHOW*
-        favoriteMovie: *REFERENCE MODEL SOMEHOW*
+        user: User!
+        favoriteMovie: [Movie]!
     }
 
     type Movie {
@@ -23,14 +24,25 @@ const typeDefs = gql`
     }
 
     type Query {
-
+        user: User!
+        profile: Profile!
+        movie: [Movie]!
     }
 
     type Mutation {
-        
+        createUser(first: String!, last: String!, username: String!, email: String!, password: String!, profile:)
     }
 `;
 
 module.exports = typeDefs;
 
-// 'createdAt: ' not sure how to reference date here for User 
+// would need corresponding models
+// signUpInput {
+//   email:String!
+//   username: String!
+//   password: String!
+// }
+
+// searchInput {
+//     search: String!
+// }
