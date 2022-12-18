@@ -7,28 +7,6 @@ import Auth from '../../utils/auth';
 
 
 const Header = () => {
-// const [userName, setUserName] = useState('');
-// const [password, setPassword] = useState('');
-// const [isLoggedIn, setIsLoggedIn] = useState('false');
-
-// const login = (event) => {
-// event.preventDefault();
-// console.log(userName, password);
-// const userData = {
-//     userName,
-//     password
-// };
-// localStorage.setItem('token-info', JSON.stringify(userData));
-// setIsLoggedIn(true);
-// setUserName('');
-// setPassword('');
-// };
-
-  // const logout = () => {
-  //   localStorage.removeItem('token-info');
-  //   setIsLoggedIn(false);
-  // };
-
   const logout = (event) => {
     event.preventDefault();
     Auth.logout();
@@ -43,7 +21,6 @@ const Header = () => {
                 {/* <Link className='link' to='/genres'>Genre Search</Link> */}
                 <Link className='link' to='/account'>Account</Link>
                 <Link className='link' to='/about'>About</Link>
-                {/* <Link className='link' to='/login'>{loginStatus}</Link> */}
             </nav>
             <div>
               {Auth.loggedIn() ? (
@@ -52,7 +29,7 @@ const Header = () => {
               ) : (
                 <>
                 <Link to='/login'>Login</Link>
-                <Link to='/signup'>Signup</Link>
+                {/* <Link to='/signup'>Signup</Link> */}
                 </>
               )}
               </div>
