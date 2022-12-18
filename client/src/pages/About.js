@@ -1,10 +1,11 @@
 import React from 'react';
+import iconPath from '../images/squareIconSm.png'
 // import styles
 
 const About = () => {
     return (
         <div>
-            
+
             <h2>About</h2>
             <p>
                 Couch Tuber is a streaming search app and is meant to consolidate all of a user's streaming services, 
