@@ -5,5 +5,6 @@ query user {
     user {
         _id
         username
+        streamServices
     }
 }`;
