@@ -4,21 +4,14 @@ import iconPath from '../images/squareIconSm.png'
 
 const About = () => {
     return (
-        <div>
-
-            <h2>About</h2>
-            <p>
-                Couch Tuber is a streaming search app and is meant to consolidate all of a user's streaming services, 
-                allowing them to search for titles among all their streaming services, view all the renewal dates 
-                and prices in one place, and, eventually, to browse all the streaming services by genre at the same time, 
-                making it easier to find something to watch. 
-            </p>
-            <p>
-                Couch Tuber was created by Calvin Bauman, Allen Gonzalas, Josue Garza, and Deborah Wade. 
-            </p>
-            <p>
-                It was created as a final project for The University of Washington's Full-stack bootcamp. 
-            </p>
+        <div class='body-external'>
+            <div class='about-me-title'> About Us </div>
+            <div class='about-me'>
+                Couch Tuber is a search platform that makes it easy to find what streaming services your favorite TV Shows, Movies, Documentaries and more are located on. Additionally, you can create an account to save infomration about your streaming services; select which streaming services you are subscribed to, view all of your renewal dates, view and compare streaming service prices and, eventually, browse all the streaming services by genre at the same time. With Couch Tuber, finding entertainment has never been easier.
+            </div>
+            <div class='about-me'>
+                Couch Tuber was created as a final project for The University of Washington's full-stack bootcamp. 
+            </div>
         </div>
     )
 }
