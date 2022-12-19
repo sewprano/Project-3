@@ -48,25 +48,26 @@ const Login = (props) => {
             {data ? (
                 <p>Logged in visit your {''} <link to='/account'>account</link></p> 
             ) : (
-                <Form onSubmit={handleFormSubmit}>
-                    <Form.Control
-                    placeholder='Username'
-                    name='username'
-                    type='text'
-                    value={formState.username}
-                    onChange={handleChange}
-                    />
-                    
-                    <Form.Control
-                    placeholder='password'
-                    name='password'
-                    type='password'
-                    value={formState.password}
-                    onChange={handleChange}
-                    />
-
-                    <button type="submit"> Submit</button>
-                </Form>
+                <div>
+                    <Form onSubmit={handleFormSubmit} class='user-bar'>
+                        <Form.Control
+                        placeholder='Username'
+                        name='username'
+                        type='text'
+                        value={formState.username}
+                        onChange={handleChange}
+                        />
+                        
+                        <Form.Control class='password-bar'
+                        placeholder='password'
+                        name='password'
+                        type='password'
+                        value={formState.password}
+                        onChange={handleChange}
+                        />
+                    </Form>
+                    <button class='search-button' type="submit"> LOGIN </button>
+                </div>
             )
         }
 

@@ -109,3 +109,21 @@ input {
   font-size: 15px;
   margin-top: 5vh;
 }
+
+.user-bar {
+  width: 20%;
+  height: 40px;
+  border-radius: 25px;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 30vh;
+}
+
+.password-bar {
+  width: 20%;
+  height: 40px;
+  border-radius: 25px;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 1vh;
+}
