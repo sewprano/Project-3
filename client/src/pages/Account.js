@@ -17,6 +17,9 @@ const Account = () => {
             <img src={avatarPath} />
             <h2>{userName}</h2>
             <div>
+                <form action="upload.php" method="post">
+                <input type="file" name="file" id="file"/>
+            </form>
 
             </div>
             {/* <div className='services'>
