@@ -1,13 +1,99 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+  height: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: Audiowide, Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url("C:\Users\calvi\hw\Project-3\client\src\images\Final Project Background.jpg");
+  background-size: cover;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.body-external {
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.title-text {
+  text-align: center;
+  color: black;
+  font-size: 60px;
+  width: 100%;
+  margin-top: 35vh;
+}
+
+.sub-title-text {
+  text-align: center;
+  color: black;
+  font-size: 15px;
+  margin-top: 5vh;
+}
+
+.search-bar {
+  width: 35%;
+  height: 40px;
+  border-radius: 25px;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 2vh;
+}
+
+.search-button {
+  width: 6%;
+  height: 40px;
+  border-radius: 25px;
+  margin-top: 100px;
+  margin: 0 auto;
+  display: flex;
+  margin-block-start: 1%;
+}
+
+.search-button:hover {
+  background-color: white;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  text-align: center;
+  font-size: 10px;
+}
+
+.nav-container {
+  display: inline;
+}
+
+.nav-bar {
+  float: left;
+  margin-right: 20px;
+  margin-top: 5px;
+  color: black;
+}
+
+.nav-bar-right {
+  float: right;
+  margin-top: 5px;
+  margin-right: 20px;
+  color: black;
+}
+
+input {
+  text-align: center;
+  font: Audiowide;
 }
