@@ -43,9 +43,8 @@ const Login = (props) => {
 
 
     return (
-        <div>
-            <img src={iconPath}/>
-            <h2>LOGIN</h2>
+        <div class='body-external'>
+            <div class='about-me-title'>LOGIN</div>
             {data ? (
                 <p>Logged in visit your {''} <link to='/account'>account</link></p> 
             ) : (
