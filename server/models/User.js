@@ -8,10 +8,7 @@ var validateEmail = function(email) {
 
 // user schema
 const userSchema = new Schema({
-    streamingServices: {
-        type: String,
-        required: true,
-    },
+    streamingServices: String,
     username: {
         type: String,
         required: true,
