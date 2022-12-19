@@ -10,6 +10,8 @@ const Account = () => {
         fetchPolicy: "no-cache"
     })
 
+    
+
     return (
         <div>
             <img src={avatarPath} />

@@ -30,6 +30,17 @@ const Header = () => {
               </div>
               )}
             </nav>
+            <div>
+              {Auth.loggedIn() ? (
+                <>
+                <button onClick={logout}>Logout</button></>
+              ) : (
+                <>
+                <Link to='/login'>Login</Link>
+                {/* <Link to='/signup'>Signup</Link> */}
+                </>
+              )}
+              </div>
         </header>
     );
 }
