@@ -23,5 +23,9 @@
   "homepage": "https://github.com/sewprano/Project-3#readme",
   "devDependencies": {
     "concurrently": "^7.6.0"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "script": "^0.1.4"
   }
 }
