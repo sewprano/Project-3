@@ -7,13 +7,12 @@ const typeDefs = gql`
         email: String!
         password: String!
         profile: Profile!
-        streamServices: [Stream]! 
+        streamServices: [Stream!] 
     }
 
     type Profile {
         _id: ID!
-        user: User!
-        favoriteMovie: [Movie]!
+        favoriteMovie: [Movie!]
     }
 
     type Movie {
@@ -24,19 +23,23 @@ const typeDefs = gql`
 
     type Stream {
         name: String!
-        renewelPrice: Int!
-        renewlDate: Date!
+        renewalPrice: Int!
+        renewalDate: Date!
     },
 
     type Query {
         user: User!
         profile: Profile!
-        movie: [Movie]!
-        streamingServices: [Stream]!
+        movie: [Movie!]
+        streamingServices: [Stream!]
     }
 
     type Mutation {
-        createUser(first: String!, last: String!, username: String!, email: String!, password: String!, profile:)
+        createUser(username: String!, email: String!, password: String!) : User!
+        deleteUser(id: ID!): User!
+        createMovie(title: String!): Movie!
+        addStreamService(name: String!, renewalPrice: Int!, renewalDate: Date!)
+        # maybe an add profile here
     }
 `;
 
