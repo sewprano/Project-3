@@ -13,7 +13,7 @@ const Home = () => {
             <form>
                 <label for='Home' ></label>
                 <input type='text' class='search-bar' name='Title Name' placeholder='-- Search entertainment here --'></input>
-                <input class='search-button' type='submit' value='Watch!'></input>
+                <input type='submit' class='search-button' value='Watch!'></input>
             </form>
             
         </div>
