@@ -1,5 +1,7 @@
 import React from 'react';
+// import axios from 'axios';
 import styles from './Home.module.css';
+import SearchBar from './SearchBar';
 
 import logoPath from '../images/mainLogo.png';
 import iconPath from '../images/circleIcon2Sm.png';
@@ -7,6 +9,7 @@ import iconPath from '../images/circleIcon2Sm.png';
 const Home = () => {
     return (
         <div>
+            <SearchBar/>
             <img src={logoPath} />
             <h1>Couch Tuber</h1>
             <h2>Streaming Search</h2>
