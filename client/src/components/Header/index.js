@@ -15,11 +15,11 @@ const Header = () => {
     return (
         <header className={styles.header}>
             {/* add logo here */}
-            <nav class='nav-container'>
-                <Link className='nav-bar' to='/'>Home</Link>
+            <nav>
+                <Link class='nav-bar' to='/'>Home</Link>
                 {/* <Link className='link' to='/genres'>Genre Search</Link> */}
-                <Link className='nav-bar' to='/account'>Account</Link>
-                <Link className='nav-bar' to='/about'>About</Link>
+                <Link class='nav-bar' to='/account'>Account</Link>
+                <Link class='nav-bar' to='/about'>About</Link>
                 {Auth.loggedIn() ? (
                 <>
                 <button onClick={logout}>Logout</button></>
@@ -31,7 +31,6 @@ const Header = () => {
               )}
             </nav>
         </header>
-
     );
 }
 

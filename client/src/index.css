@@ -21,7 +21,6 @@ body {
 
 .body-external {
   display: table;
-  position: absolute;
   top: 0;
   left: 0;
   height: 100%;
@@ -62,7 +61,7 @@ body {
 }
 
 .search-button:hover {
-  background-color: white;
+  background-color: rgb(180, 180, 180);
 }
 
 .footer {
