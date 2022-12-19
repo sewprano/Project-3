@@ -3,14 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {     
-    "start": "node server --ignore client",     
-    "develop": "concurrently \"cd server && npm run server.js\" \"cd client && npm start\"",     
-    "install": "cd server && npm i && cd ../client && npm i",     
-    "seed": "cd server && npm run seed",     
+  "scripts": {
+    "start": "node server --ignore client",
+    "develop": "concurrently \"cd server && npm run server.js\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "seed": "cd server && npm run seed",
     "build": "cd client && npm run build"
   },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sewprano/Project-3.git"
@@ -24,5 +23,9 @@
   "homepage": "https://github.com/sewprano/Project-3#readme",
   "devDependencies": {
     "concurrently": "^7.6.0"
+  },
+  "dependencies": {
+    "express-graphql": "^0.12.0",
+    "graphql": "^16.6.0"
   }
 }
