@@ -1,4 +1,4 @@
-const { Schema } = require('mongoose');
+const { Schema, model } = require('mongoose');
 
 // helper function
 var validateEmail = function(email) {
@@ -8,10 +8,16 @@ var validateEmail = function(email) {
 
 // user schema
 const userSchema = new Schema({
+    streamingServices: {
+        type: String,
+        required: true,
+    },
     username: {
         type: String,
         required: true,
+        unique: true,
         max_length: 25,
+        min_length: 4,
       },
     email: {
         type: String,
@@ -24,9 +30,11 @@ const userSchema = new Schema({
         max_length: 25,
     },
     createdAt: {
-        type: date,
+        type: Date,
         default: Date.now,
     },
 });
 
-module.exports = userSchema;
+const User = model('user', userSchema);
+
+module.exports = User;

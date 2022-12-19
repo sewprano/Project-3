@@ -1,10 +1,16 @@
 import React from 'react';
 import styles from './Header.module.css';
 import {Link} from 'react-router-dom';
+import Auth from '../../utils/auth';
+// import styles from ./Header.module.css;
 
-let loginStatus = 'Login';
-function Header() {
-// component function body here??
+
+
+const Header = () => {
+  const logout = (event) => {
+    event.preventDefault();
+    Auth.logout();
+  };
 
     return (
         <header className={styles.header}>
@@ -15,8 +21,18 @@ function Header() {
                 {/* <Link className='link' to='/genres'>Genre Search</Link> */}
                 <Link className='link' to='/account'>Account</Link>
                 <Link className='link' to='/about'>About</Link>
-                <Link className='link' to='/login'>{loginStatus}</Link>
             </nav>
+            <div>
+              {Auth.loggedIn() ? (
+                <>
+                <button onClick={logout}>Logout</button></>
+              ) : (
+                <>
+                <Link to='/login'>Login</Link>
+                {/* <Link to='/signup'>Signup</Link> */}
+                </>
+              )}
+              </div>
         </header>
 
     );

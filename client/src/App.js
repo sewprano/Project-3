@@ -2,12 +2,13 @@
 // import './App.css';
 import React from 'react';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import   { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // import pages & components
 import Home from './pages/Home';
 import Account from './pages/Account';
 import About from './pages/About';
+import Login from './pages/Login';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -28,17 +29,21 @@ function App() {
               path="/"
               element={<Home />}
               />
-              {/* <Route
+              <Route
               path="/account"
               element={<Account />}
               />
               <Route
               path="/About"
               element={<About />}
-              /> */}
+              />
+              <Route
+              path="/Login"
+              element={<Login />}
+              />
             </Routes>
           </div>
-          {/* <Footer /> */}
+          <Footer />
         </div>
       </Router>
     </ApolloProvider>
