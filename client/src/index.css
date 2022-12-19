@@ -19,6 +19,14 @@ body {
   display: flex;
 }
 
+.float-right {
+  float: right;
+}
+
+.icon {
+  margin-top: 20vh;
+}
+
 .body-external {
   display: table;
   top: 0;
