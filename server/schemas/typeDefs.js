@@ -6,69 +6,54 @@ const typeDefs = gql`
         username: String
         email: String
         password: String
-        streamServices: [Stream] 
+        # streamServices: [Stream] 
     }
 
-    input UserInput {
-        username: String
-        email: String
-        password: String
-    }
+    # type Movie {
+    #     title: String
+    #     director: String
+    # }
 
-    type Profile {
-        _id: ID
+    type Auth {
+        token: ID!
         user: User
-        summary: String
-        favoriteMovie: [Movie]
     }
+    
+    # type Stream {
+    #     name: String
+    #     renewalPrice: Int
+    #     renewalDate: Int
+    # },
 
-    type Movie {
-        title: String
-        director: String
-        year: Int
-    }
+    # input StreamInput {
+    #     name: String
+    # }
 
-    input MovieInput {
-        title: String
-        director: String
-    }
+    # type Profile {
+    #     _id: ID
+    #     user: User
+    #     summary: String
+    #     favoriteMovie: [Movie]
+    # }
 
-    type Stream {
-        name: String
-        renewalPrice: Int
-        renewalDate: Int
-    },
-
-    input StreamInput {
-        name: String
-    }
-
+    #Queries
     type Query {
+        users: [User]
         user(ID: ID!): User
-        profile: Profile
-        movie: [Movie]
-        streamingServices: [Stream]
+        # movies: [Movie]
+        # streamingServices: [Stream]
     }
 
     type Mutation {
-        createUser(userInput: UserInput) : User!
-        deleteUser(id: ID!): User!
-        createMovie(title: String!): Movie!
-        editMovie(ID: ID!,movieInput: MovieInput): Boolean
-        addStreamService(StreamInput: StreamInput): Stream!
+        login(email: String!, password: String!) : Auth
+        newUser(username: String!, email: String!, password: String!) : User
+        deleteUser(ID: ID!, username: String!, email: String!, password: String!): User
+        # addMovie(title: String!, director: String!): Movie
+        # deleteMovie(ID: ID!, title: String!, director: String!): Movie
+        # createMovie(title: String!): Movie!
+        # editMovie(ID: ID!,movieInput: MovieInput): Boolean
         # maybe an add profile here
     }
 `;
 
 module.exports = typeDefs;
-
-// would need corresponding models
-// signUpInput {
-//   email:String!
-//   username: String!
-//   password: String!
-// }
-
-// searchInput {
-//     search: String!
-// }
