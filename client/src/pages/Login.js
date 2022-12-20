@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {link} from 'react-router-dom';
 import {useMutation} from '@apollo/client';
-import {LOGIN_USER} from '../utils/mutations';
+import {LOGIN_USER} from '../utils/mutations.js';
 import Auth from '../utils/auth';
 import iconPath from '../images/squareIconSm.png';
 // import styles
