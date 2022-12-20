@@ -58,7 +58,7 @@ return (
         <input class='search-bar'
           type="text"
           id="query"
-          placeholder='-- Search entertainment here --'
+          placeholder='-- Movie & TV Show keywords here --'
           value={query}
           onChange={handleChange}
         />
