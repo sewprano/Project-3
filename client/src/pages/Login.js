@@ -66,7 +66,7 @@ const Login = (props) => {
                         onChange={handleChange}
                         />
                     </Form>
-                    <button class='search-button' type="submit"> LOGIN </button>
+                    <button type="submit"> LOGIN </button>
                 </div>
             )
         }
