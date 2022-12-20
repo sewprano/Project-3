@@ -11,10 +11,8 @@ const userSchema = new Schema({
     streamingServices: String,
     username: {
         type: String,
-        required: true,
+        required: [true, 'Username is required'],
         unique: true,
-        max_length: 25,
-        min_length: 4,
       },
     email: {
         type: String,
@@ -26,10 +24,10 @@ const userSchema = new Schema({
         required: true,
         max_length: 25,
     },
-    createdAt: {
-        type: Date,
-        default: Date.now,
-    },
+    movies: {
+        type: Schema.Types.ObjectId,
+        ref: 'Movie'
+    }
 });
 
 const User = model('user', userSchema);

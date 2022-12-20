@@ -5,7 +5,6 @@ const { Schema, model } = require('mongoose');
 const movieSchema = new Schema({
     title: String,
     director: String,
-    year: Number,
 });
 
 const Movie = model('movie', movieSchema)
