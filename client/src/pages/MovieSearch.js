@@ -54,19 +54,20 @@ function MovieSearch() {
 return (
     <div>
       <form>
-        <label htmlFor="query">Search for a movie:</label>
-        <input
+        <label htmlFor="query"></label>
+        <input class='search-bar'
           type="text"
           id="query"
+          placeholder='-- Search entertainment here --'
           value={query}
           onChange={handleChange}
         />
       </form>
-      <div>{streamingService}</div>
+      <div class='result-title-text'>{streamingService}</div>
       {results.length > 0 && (
-        <ul style={{display:'inline'}}>
+        <ul class='steaming-results'>
           {results.map((result) => (
-            <li  key={result.id} style={{display:'inline-block'}}>
+            <li class='streaming-results 'key={result.id} >
             <img onClick={showService} id={result.id} src={'https://image.tmdb.org/t/p/w300_and_h450_bestv2/' + result.poster_path}/>
               {/* {result.streaming_service.join(', ')} */}
             </li>
